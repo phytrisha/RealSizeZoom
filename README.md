@@ -7,7 +7,7 @@ A Sketch plugin that emulates InDesign's "zoom to real size" functionality.
  3. Press <kbd>Cmd</kbd> + <kbd>alt</kbd> + <kbd>r</kbd> to zoom to the size your actual device will be.
 
 ## Installation
- 1. [Download] the plugin.
+ 1. [Download](https://github.com/phytrisha/RealSizeZoom/archive/master.zip) the plugin.
  2. Unzip & run ‘RealSizeZoom.sketchplugin’ to install
 
 ## Created by
