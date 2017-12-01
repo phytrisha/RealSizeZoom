@@ -29,11 +29,11 @@ var artboardZoom = function(context) {
   var targetRealWidth = 0
   var targetPxCount = 0
 
-  var screenWidthCm = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInCm',docData,'ZoomToPhysicalSize')
-  var screenWidthPx = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInPx',docData,'ZoomToPhysicalSize')
+  var screenWidthCm = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInCm',docData,'RealSizeZoom')
+  var screenWidthPx = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInPx',docData,'RealSizeZoom')
 
-  var targetWidthCm = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInCm',docData,'ZoomToPhysicalSize')
-  var targetWidthPx = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInPx',docData,'ZoomToPhysicalSize')
+  var targetWidthCm = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInCm',docData,'RealSizeZoom')
+  var targetWidthPx = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInPx',docData,'RealSizeZoom')
 
   if (screenWidthCm != "") {
     realWidth = parseInt(screenWidthCm)
@@ -87,10 +87,10 @@ var setupUserScreen = function(context) {
   var command = context.command;
 
   var resultCm = [doc askForUserInput:"How large is your screen in width? (cm!)" initialValue:"50"];
-  command.setValue_forKey_onLayer_forPluginIdentifier(resultCm,'screenWidthInCm',docData,'ZoomToPhysicalSize');
+  command.setValue_forKey_onLayer_forPluginIdentifier(resultCm,'screenWidthInCm',docData,'RealSizeZoom');
 
   var resultPx = [doc askForUserInput:"How is your screen resolution in width? (Pixels!)" initialValue:"1920"];
-  command.setValue_forKey_onLayer_forPluginIdentifier(resultPx,'screenWidthInPx',docData,'ZoomToPhysicalSize');  
+  command.setValue_forKey_onLayer_forPluginIdentifier(resultPx,'screenWidthInPx',docData,'RealSizeZoom');  
 }
 
 var setupTargetScreen = function(context) {
@@ -99,10 +99,10 @@ var setupTargetScreen = function(context) {
   var command = context.command;
   
   var targetResultCm = [doc askForUserInput:"How large is the target screen in width? (cm!)" initialValue:"50"];
-  command.setValue_forKey_onLayer_forPluginIdentifier(targetResultCm,'targetScreenWidthInCm',docData,'ZoomToPhysicalSize');
+  command.setValue_forKey_onLayer_forPluginIdentifier(targetResultCm,'targetScreenWidthInCm',docData,'RealSizeZoom');
 
   var targetResultPx = [doc askForUserInput:"How is the target screen resolution in width? (Pixels!)" initialValue:"1920"];
-  command.setValue_forKey_onLayer_forPluginIdentifier(targetResultPx,'targetScreenWidthInPx',docData,'ZoomToPhysicalSize');  
+  command.setValue_forKey_onLayer_forPluginIdentifier(targetResultPx,'targetScreenWidthInPx',docData,'RealSizeZoom');  
 }
 
 var showSetup = function (context) {
@@ -110,10 +110,10 @@ var showSetup = function (context) {
   var docData = context.document.documentData();
   var command = context.command;
 
-  var screenWidthCm = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInCm',docData,'ZoomToPhysicalSize')
-  var screenWidthPx = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInPx',docData,'ZoomToPhysicalSize')
-  var targetScreenWidthCm = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInCm',docData,'ZoomToPhysicalSize')
-  var targetScreenWidthPx = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInPx',docData,'ZoomToPhysicalSize')
+  var screenWidthCm = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInCm',docData,'RealSizeZoom')
+  var screenWidthPx = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInPx',docData,'RealSizeZoom')
+  var targetScreenWidthCm = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInCm',docData,'RealSizeZoom')
+  var targetScreenWidthPx = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInPx',docData,'RealSizeZoom')
   var result = "cm: " + screenWidthCm + " px: " + screenWidthPx;
   var target = "cm: " + targetScreenWidthCm + " px: " + targetScreenWidthPx;
 
