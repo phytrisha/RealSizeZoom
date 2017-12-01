@@ -2,9 +2,13 @@
 A Sketch plugin that emulates InDesign's "zoom to real size" functionality.
 
 ## How to use
- 1. Click "Setup your screen" and type in your screen width in cm as well as your pixel count in width (important: @1x)
+ 1. Click "Setup your screen" and type in your screen width in cm as well as your pixel count in width (important: @1x).
  2. Click "Setup target screen" and type in the width of the screen your designing for as well as the pixel count in width (again important: @1x) of that screen.
- 3. Press <kbd>Cmd</kbd> + <kbd>alt</kbd> + <kbd>r</kbd> to zoom to the size your actual device will be.
+ 3. Press <kbd>Cmd</kbd> + <kbd>alt</kbd> + <kbd>r</kbd> to zoom to the size your actual device will be. 
+
+## Notes
+ * The information about your screen and the target screen are stored in the sketch file, so you will have to set it up for each sketch file individually. On the bright side, you can work for multiple target devices in different files and won't have to re-configure the plugin. You can view the current settings by clicking on "Show current settings"
+ * If you are not sure about a specific screen size, you can view this table on [Wikipedia](https://en.wikipedia.org/wiki/Display_size)
 
 ## Installation
  1. [Download](https://github.com/phytrisha/RealSizeZoom/archive/master.zip) the plugin.
