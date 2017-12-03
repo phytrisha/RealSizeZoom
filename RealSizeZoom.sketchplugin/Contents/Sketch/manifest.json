@@ -40,7 +40,7 @@
     ]
   },
   "identifier" : "com.github.phytrisha.realsizezoom",
-  "version" : "0.1",
+  "version" : "0.1.1",
   "description" : "Sketch plugin to zoom to the amount, in which the layout will actually be displayed on target device",
   "authorEmail" : "markf.meyer@icloud.com",
   "name" : "Real Size Zoom"

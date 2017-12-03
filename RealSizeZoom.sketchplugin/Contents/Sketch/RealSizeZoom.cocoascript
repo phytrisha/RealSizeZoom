@@ -29,55 +29,60 @@ var artboardZoom = function(context) {
   var targetRealWidth = 0
   var targetPxCount = 0
 
+  var setupComplete = true
+
   var screenWidthCm = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInCm',docData,'RealSizeZoom')
   var screenWidthPx = command.valueForKey_onLayer_forPluginIdentifier('screenWidthInPx',docData,'RealSizeZoom')
 
   var targetWidthCm = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInCm',docData,'RealSizeZoom')
   var targetWidthPx = command.valueForKey_onLayer_forPluginIdentifier('targetScreenWidthInPx',docData,'RealSizeZoom')
 
-  if (screenWidthCm != "") {
+  if (screenWidthCm != null) {
     realWidth = parseInt(screenWidthCm)
   } else {
+  	setupComplete = false
     doc.showMessage("Please set up screen first!");
   }
 
-  if (screenWidthPx != "") {
+  if (screenWidthPx != null) {
     pxCount = parseInt(screenWidthPx)
   } else {
+  	setupComplete = false
     doc.showMessage("Please set up screen first!");
   }
 
-  if (targetWidthCm != "") {
+  if (targetWidthCm != null) {
     targetRealWidth = parseInt(targetWidthCm)
   } else {
+  	setupComplete = false
     doc.showMessage("Please set up screen first!");
   }
 
-  if (screenWidthPx != "") {
+  if (screenWidthPx != null) {
     targetPxCount = parseInt(targetWidthPx)
   } else {
+  	setupComplete = false
     doc.showMessage("Please set up screen first!");
   }
 
-  var cmPerPx = realWidth / pxCount
+  if (setupComplete) {
+	var cmPerPx = realWidth / pxCount
+	var requiredPx = targetRealWidth / cmPerPx
+	var zoom = requiredPx / targetPxCount
 
-  
-
-  var requiredPx = targetRealWidth / cmPerPx
-  var zoom = requiredPx / targetPxCount
-
-  // doc.showMessage(parseInt(zoom * 100) + "%");
-// ------------------------------------------------------------
-  var targetArtboard = _getCurrentArtboard(context);
-  var targetRect = targetArtboard.rect();
-  var view = [doc currentView];
-  
-  [doc setZoomValue:zoom]
-  [view centerRect:targetRect];
-  // This is here to force a redraw of the canvas
-  // var c = [doc currentPage]
-  // [doc setCurrentPage:0]
-  // [doc setCurrentPage:c]
+	// doc.showMessage(parseInt(zoom * 100) + "%");
+	// ------------------------------------------------------------
+	var targetArtboard = _getCurrentArtboard(context);
+	var targetRect = targetArtboard.rect();
+	var view = [doc currentView];
+	  
+	[doc setZoomValue:zoom]
+	[view centerRect:targetRect];
+	// This is here to force a redraw of the canvas
+	// var c = [doc currentPage]
+	// [doc setCurrentPage:0]
+	// [doc setCurrentPage:c]
+  }
 
 };
 
