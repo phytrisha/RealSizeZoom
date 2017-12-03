@@ -20,4 +20,4 @@ With Sketch Runner, just go to the `install` command and search for `Real Size Z
  2. Unzip & run ‘RealSizeZoom.sketchplugin’ to install
 
 ## Created by
-[Mark Meyer](https://github.com/phytrisha), Stuttgart (DE)
+[Mark Meyer](http://mark-gestaltung.de), Stuttgart (DE)
