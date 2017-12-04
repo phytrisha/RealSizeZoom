@@ -1,0 +1,55 @@
+{
+  "author" : "Mark Frederik Meyer",
+  "commands" : [
+    {
+      "script" : "RealSizeZoom.cocoascript",
+      "handler" : "artboardZoom",
+      "shortcut" : "command + alt + r",
+      "name" : "Zoom to Real Size",
+      "identifier" : "ZoomToPhysicalSize",
+      "description" : "Zoom to the actual size of the artboard.",
+      "icon" : "icons/zoomToRealSize.png"
+    },
+    {
+      "script" : "RealSizeZoom.cocoascript",
+      "handler" : "setupUserScreen",
+      "shortcut" : "",
+      "name" : "Setup Your Screen",
+      "identifier" : "setupUserScreen",
+      "description" : "Setup the screen you are working on.",
+      "icon" : "icons/setupYourScreen.png"
+    },
+    {
+      "script" : "RealSizeZoom.cocoascript",
+      "handler" : "setupTargetScreen",
+      "shortcut" : "",
+      "name" : "Setup Target Screen",
+      "identifier" : "setupTargetScreen",
+      "description" : "Setup the screen you are designing for.",
+      "icon" : "icons/setupTargetScreen.png"
+    },
+    {
+      "script" : "RealSizeZoom.cocoascript",
+      "handler" : "showSetup",
+      "shortcut" : "",
+      "name" : "Show Current Settings",
+      "identifier" : "showSetup",
+      "description" : "Display the currently active settings of Real Size Zoom.",
+      "icon" : "icons/showCurrentSettings.png"
+    }
+  ],
+  "menu": {
+    "isRoot": false,
+    "items": [
+      "ZoomToPhysicalSize",
+      "setupUserScreen",
+      "setupTargetScreen",
+      "showSetup"
+    ]
+  },
+  "identifier" : "com.github.phytrisha.realsizezoom",
+  "version" : "0.1.2",
+  "description" : "Sketch plugin to zoom to the amount, in which the layout will actually be displayed on target device",
+  "authorEmail" : "markf.meyer@icloud.com",
+  "name" : "Real Size Zoom"
+}
