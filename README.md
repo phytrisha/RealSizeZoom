@@ -1,6 +1,9 @@
 # Real Size Zoom For Sketch
 A Sketch plugin that emulates InDesign's "zoom to real size" functionality.
 
+## Important!
+If you have updated to sketch v48, the plugin will not work anymore. There is a branch that contains a fix for v48, but it removes the ability to zoom in one the artboard that is selected, it just zooms to the origin of your file.
+
 ## How to use
  1. Click "Setup your screen" and type in your screen width in cm as well as your pixel count in width (important: @1x).
  2. Click "Setup target screen" and type in the width of the screen your designing for as well as the pixel count in width (again important: @1x) of that screen.
